@@ -4,13 +4,25 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class HelloViewModel {
-    private final StringProperty welcomeText = new SimpleStringProperty();
+    private final StringProperty transactionName = new SimpleStringProperty();
+    private final StringProperty amount = new SimpleStringProperty("0.00");
+    private final StringProperty status = new SimpleStringProperty();
 
-    public StringProperty getWelcomeText() {
-        return welcomeText;
+    public StringProperty getTransactionName() {
+        return transactionName;
     }
 
-    public void sayHello() {
-        welcomeText.set("Welcome to JavaFX App! I'm JBud!");
+    public StringProperty getAmount() {
+        return amount;
+    }
+
+    public StringProperty getStatus() {
+        return status;
+    }
+
+    public void submitTransaction() {
+        transactionName.set(getTransactionName().get());
+        amount.set(getAmount().get());
+        status.set("Submitted");
     }
 }

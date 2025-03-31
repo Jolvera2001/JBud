@@ -4,6 +4,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
 public class HelloView extends VBox {
@@ -16,13 +17,15 @@ public class HelloView extends VBox {
         setSpacing(20.0);
         setPadding(new Insets(20.0));
 
-        Label welcomeLabel = new Label();
-        Button helloButton = new Button("Hello");
+        TransactionForm transactionForm = new TransactionForm(
+                viewModel.getTransactionName(),
+                viewModel.getAmount(),
+                viewModel.getStatus(),
+                viewModel::submitTransaction
+        );
+        transactionForm.setMaxHeight(USE_PREF_SIZE);
 
-        welcomeLabel.textProperty().bind(viewModel.getWelcomeText());
-
-        helloButton.setOnAction(event -> viewModel.sayHello());
-
-        getChildren().addAll(welcomeLabel, helloButton);
+        getChildren().addAll(transactionForm);
     }
 }
+
