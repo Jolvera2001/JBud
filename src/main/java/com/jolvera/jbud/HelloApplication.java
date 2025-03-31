@@ -13,6 +13,7 @@ public class HelloApplication extends Application {
         HelloView view = new HelloView();
 
         Scene scene = new Scene(view, 320, 240);
+        scene.getStylesheets().add(getClass().getResource("css/global.css").toExternalForm());
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
