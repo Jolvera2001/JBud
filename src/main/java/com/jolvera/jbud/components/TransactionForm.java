@@ -1,6 +1,5 @@
-package com.jolvera.jbud;
+package com.jolvera.jbud.components;
 
-import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.StringProperty;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
