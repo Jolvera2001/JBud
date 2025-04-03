@@ -32,4 +32,16 @@ public class Expense extends RecurringExpense {
         this.autoRenewal = autoRenewal;
         this.notes = notes;
     }
+
+    public String getPayee() { return payee; }
+    public void setPayee(String payee) { this.payee = payee; }
+
+    public String getPaymentMethod() { return paymentMethod; }
+    public void setPaymentMethod(String paymentMethod) { this.paymentMethod = paymentMethod; }
+
+    public boolean isAutoRenewal() { return autoRenewal; }
+    public void setAutoRenewal(boolean autoRenewal) { this.autoRenewal = autoRenewal; }
+
+    public String getNotes() { return notes; }
+    public void setNotes(String notes) { this.notes = notes; }
 }

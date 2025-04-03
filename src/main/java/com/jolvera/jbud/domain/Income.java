@@ -29,4 +29,13 @@ public class Income extends RecurringExpense {
         this.isGuaranteed = isGuaranteed;
         this.notes = notes;
     }
+
+    public String getSource() { return source; }
+    public void setSource(String source) { this.source = source; }
+
+    public boolean isGuaranteed() { return isGuaranteed; }
+    public void setGuaranteed(boolean isGuaranteed) { this.isGuaranteed = isGuaranteed; }
+
+    public String getNotes() { return notes; }
+    public void setNotes(String notes) { this.notes = notes; }
 }
