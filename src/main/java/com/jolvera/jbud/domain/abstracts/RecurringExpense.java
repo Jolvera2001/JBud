@@ -1,5 +1,8 @@
 package com.jolvera.jbud.domain.abstracts;
 
+import com.jolvera.jbud.domain.enums.RecurrencePattern;
+import com.jolvera.jbud.domain.enums.TransactionType;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
