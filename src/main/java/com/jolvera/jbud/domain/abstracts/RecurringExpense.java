@@ -16,6 +16,22 @@ public abstract class RecurringExpense {
     private TransactionType type;
     private RecurrencePattern recurrencePattern;
 
+    public RecurringExpense(
+            UUID id,
+            String description,
+            BigDecimal amount,
+            LocalDate startDate,
+            TransactionType type,
+            RecurrencePattern recurrencePattern
+    ) {
+        this.id = id;
+        this.description = description;
+        this.amount = amount;
+        this.startDate = startDate;
+        this.type = type;
+        this.recurrencePattern = recurrencePattern;
+    }
+
     public UUID getId() { return id; }
     public void setId(UUID id) { this.id = id; }
 
