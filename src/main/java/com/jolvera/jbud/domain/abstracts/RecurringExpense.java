@@ -16,8 +16,24 @@ public abstract class RecurringExpense {
     private TransactionType type;
     private RecurrencePattern recurrencePattern;
 
+    public UUID getId() { return id; }
+    public void setId(UUID id) { this.id = id; }
 
-    public LocalDate getNextOccurrenceDate() {
-        throw new UnsupportedOperationException("Not implemented yet");
-    }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
+
+    public BigDecimal getAmount() { return amount; }
+    public void setAmount(BigDecimal amount) { this.amount = amount; }
+
+    public LocalDate getStartDate() { return startDate; }
+    public void setStartDate(LocalDate startDate) { this.startDate = startDate; }
+
+    public boolean isActive() { return active; }
+    public void setActive(boolean active) { this.active = active; }
+
+    public TransactionType getType() { return type; }
+    public void setType(TransactionType type) { this.type = type; }
+
+    public RecurrencePattern getRecurrencePattern() { return recurrencePattern; }
+    public void setRecurrencePattern(RecurrencePattern pattern) { this.recurrencePattern = pattern; }
 }
