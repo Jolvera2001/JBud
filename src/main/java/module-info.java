@@ -6,6 +6,7 @@ module com.jolvera.jbud {
     requires com.dlsc.formsfx;
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
+    requires jdk.jshell;
 
     opens com.jolvera.jbud to javafx.fxml;
     exports com.jolvera.jbud;
