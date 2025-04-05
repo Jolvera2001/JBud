@@ -1,4 +1,5 @@
 module com.jolvera.jbud {
+    requires kotlin.stdlib;
     requires javafx.controls;
     requires javafx.fxml;
 
