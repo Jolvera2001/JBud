@@ -5,6 +5,8 @@ import javafx.geometry.Insets
 import javafx.geometry.Pos
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
+import javafx.scene.control.ListView
+import models.Transaction
 
 class HelloView//        ListView<Transaction>() transactionView = ListView<Transaction>()
 public constructor() : VBox() {
@@ -21,8 +23,10 @@ public constructor() : VBox() {
             viewModel.getAmountProperty(),
             viewModel::submitTransaction
         )
+        var transactionView = ListView<Transaction>()
+        transactionView.itemsProperty().bind(viewModel.getTransactionListProperty())
 
-        hbox.children.add(form)
+        hbox.children.addAll(form, transactionView)
         children.add(hbox)
     }
 }
