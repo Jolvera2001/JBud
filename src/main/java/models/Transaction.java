@@ -1,4 +1,4 @@
-package com.jolvera.jbud.models;
+package models;
 
 public class Transaction {
     public String name;

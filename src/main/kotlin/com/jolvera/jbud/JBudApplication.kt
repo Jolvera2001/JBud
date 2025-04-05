@@ -1,4 +1,5 @@
-import com.jolvera.jbud.HelloView
+package com.jolvera.jbud
+
 import javafx.application.Application
 import javafx.scene.Scene
 import javafx.stage.Stage

@@ -1,4 +1,4 @@
-package com.jolvera.jbud.domain.enums;
+package domain.enums;
 
 public enum TransactionCategory {
     EXPENSE,

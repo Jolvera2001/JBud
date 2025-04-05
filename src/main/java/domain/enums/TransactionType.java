@@ -1,4 +1,4 @@
-package com.jolvera.jbud.domain.enums;
+package domain.enums;
 
 import java.util.Arrays;
 import java.util.List;

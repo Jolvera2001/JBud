@@ -11,7 +11,4 @@ module com.jolvera.jbud {
 
     opens com.jolvera.jbud to javafx.fxml;
     exports com.jolvera.jbud;
-    exports com.jolvera.jbud.components;
-    exports com.jolvera.jbud.models;
-    opens com.jolvera.jbud.components to javafx.fxml;
 }
