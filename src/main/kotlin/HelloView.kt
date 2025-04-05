@@ -1,9 +1,6 @@
-import com.jolvera.jbud.HelloViewModel
-import com.jolvera.jbud.components.TransactionForm
-import com.jolvera.jbud.models.Transaction
+import components.TransactionForm
 import javafx.geometry.Insets
 import javafx.geometry.Pos
-import javafx.scene.control.ListView
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 
@@ -18,9 +15,8 @@ public constructor() : VBox() {
 
         var hbox = HBox()
         var form = TransactionForm(
-            viewModel.transactionName,
-            viewModel.amount,
-            viewModel.status,
+            viewModel.getTransactionNameProperty(),
+            viewModel.getAmountProperty(),
             viewModel::submitTransaction
         )
 

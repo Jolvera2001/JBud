@@ -1,7 +1,6 @@
 package com.jolvera.jbud;
 
 import com.jolvera.jbud.models.Transaction;
-import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
