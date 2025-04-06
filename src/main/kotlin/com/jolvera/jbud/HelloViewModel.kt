@@ -1,8 +1,8 @@
 package com.jolvera.jbud
 
+import com.jolvera.jbud.models.Transaction
 import javafx.beans.property.*
 import javafx.collections.FXCollections
-import models.Transaction
 
 class HelloViewModel {
     private val transactionNameProperty = SimpleStringProperty()

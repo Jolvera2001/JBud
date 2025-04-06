@@ -1,10 +1,7 @@
 package com.jolvera.jbud.models
 
-class Transaction {
-    private val name: String? = null
-    private val amount: Double? = null
-
+class Transaction(val name: String?, val amount: Double?) {
     override fun toString(): String {
-        return "$name : /$$amount"
+        return "$name : $$amount"
     }
 }

@@ -1,12 +1,12 @@
 package com.jolvera.jbud
 
 import com.jolvera.jbud.components.TransactionForm
+import com.jolvera.jbud.models.Transaction
 import javafx.geometry.Insets
 import javafx.geometry.Pos
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.scene.control.ListView
-import models.Transaction
 
 class HelloView//        ListView<Transaction>() transactionView = ListView<Transaction>()
 public constructor() : VBox() {

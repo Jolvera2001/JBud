@@ -1,7 +1,7 @@
 package com.jolvera.jbud.domain.abstracts
 
 import com.jolvera.jbud.domain.RecurrancePattern
-import domain.enums.TransactionType
+import com.jolvera.jbud.domain.TransactionType
 import java.time.Instant
 import java.util.*
 

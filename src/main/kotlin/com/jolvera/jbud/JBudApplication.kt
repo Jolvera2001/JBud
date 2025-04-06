@@ -9,6 +9,8 @@ class JBudApplication : Application() {
         var helloView = HelloView()
 
         var scene = Scene(helloView, 800.0, 600.0)
+        scene.stylesheets.add(javaClass.getResource("css/global.css").toExternalForm())
+
         primaryStage?.title = "JBud"
         primaryStage?.scene = scene
         primaryStage?.show()
