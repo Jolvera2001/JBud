@@ -10,10 +10,10 @@ class RecurringExpense(
     override val amount: Double,
     override val startDate: Instant,
     override val type: TransactionType,
-    override val pattern: RecurrancePattern
+    override val pattern: RecurrancePattern,
+    val payee: String,
+    val paymentMethod: String,
+    val notes: String,
+    val autoRenewable: Boolean
 ) : RecurringTransaction() {
-    private val payee: String? = null
-    private val paymentMethod: String? = null
-    private val notes: String? = null
-    private val autoRenewable: Boolean? = null
 }

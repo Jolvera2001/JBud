@@ -10,9 +10,9 @@ class RecurringIncome(
     override val amount: Double,
     override val startDate: Instant,
     override val type: TransactionType,
-    override val pattern: RecurrancePattern
+    override val pattern: RecurrancePattern,
+    val source: String,
+    val notes: String,
+    val isGuaranteed: Boolean
 ) : RecurringTransaction() {
-    private val source: String? = null
-    private val notes: String? = null
-    private val isGuaranteed: Boolean? = null
 }
