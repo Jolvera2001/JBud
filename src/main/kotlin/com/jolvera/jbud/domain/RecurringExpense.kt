@@ -1,7 +1,6 @@
-package com.jolvera.jbud.domain.abstracts
+package com.jolvera.jbud.domain
 
-import com.jolvera.jbud.domain.RecurrancePattern
-import com.jolvera.jbud.domain.TransactionType
+import com.jolvera.jbud.domain.abstracts.RecurringTransaction
 import java.time.Instant
 import java.util.*
 

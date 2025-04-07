@@ -8,7 +8,7 @@ import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.scene.control.ListView
 
-class HelloView//        ListView<Transaction>() transactionView = ListView<Transaction>()
+class HelloView
 public constructor() : VBox() {
     private val viewModel = HelloViewModel()
 
