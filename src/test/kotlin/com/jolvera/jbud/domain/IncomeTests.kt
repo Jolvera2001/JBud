@@ -25,12 +25,28 @@ class IncomeTests {
         )
 
         income shouldNotBe null
-        income.description shouldBe "test description"
+        income.description shouldBe testDescription
         income.startDate shouldBe currentDate
         income.type shouldBe TransactionType.HOUSING
         income.pattern shouldBe RecurrancePattern.MONTHLY
         income.source shouldBe testSource
         income.notes shouldBe testNotes
         income.isGuaranteed shouldBe true
+    }
+
+    @Test
+    fun incomeUUIDNotNull() {
+        val income = RecurringIncome(
+            amount = 20.00,
+            startDate = Instant.now(),
+            description = "test Description",
+            type = TransactionType.HOUSING,
+            pattern = RecurrancePattern.MONTHLY,
+            source = "test Source",
+            notes = "test Notes",
+            isGuaranteed = true
+        )
+
+        income.id shouldNotBe null
     }
 }

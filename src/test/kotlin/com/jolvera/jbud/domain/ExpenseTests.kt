@@ -39,11 +39,9 @@ class ExpenseTests {
 
     @Test
     fun expenseUUIDNotNull() {
-        val currentDate = Instant.now()
-
         val expense = RecurringExpense(
             amount = 20.00,
-            startDate = currentDate,
+            startDate = Instant.now(),
             description = "test description",
             type = TransactionType.HOUSING,
             pattern = RecurrancePattern.MONTHLY,
