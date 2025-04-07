@@ -1,6 +1,5 @@
-package com.jolvera.jbud
+package com.jolvera.jbud.examples
 
-import com.jolvera.jbud.models.Transaction
 import javafx.beans.property.*
 import javafx.collections.FXCollections
 
