@@ -37,9 +37,15 @@ javafx {
 }
 
 dependencies {
-    runtimeOnly("io.insert-koin:koin-core:4.0.4")
+    // coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-javafx:1.10.0")
+
+    // orm
+    implementation("org.xerial:sqlite-jdbc:3.44.1.0")
+    implementation("org.jetbrains.exposed:exposed-core:0.60.0")
+
+    // javafx
     implementation('org.controlsfx:controlsfx:11.2.1')
     implementation('com.dlsc.formsfx:formsfx-core:11.6.0') {
         exclude(group: 'org.openjfx')
@@ -48,9 +54,13 @@ dependencies {
         exclude(group: 'org.openjfx')
     }
     implementation('org.kordamp.ikonli:ikonli-javafx:12.3.1')
+
+    // koin
+    runtimeOnly("io.insert-koin:koin-core:4.0.4")
     implementation("io.insert-koin:koin-test:4.0.4")
     implementation("io.insert-koin:koin-test-junit5:4.0.4")
 
+    // testing
     testImplementation("io.mockk:mockk:1.13.5")
     testImplementation("io.kotest:kotest-assertions-core:5.6.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.0")
