@@ -7,9 +7,11 @@ import java.util.*
 
 abstract class RecurringTransaction {
     abstract val id: UUID
+    abstract val dateAdded: Instant
+    abstract val dateUpdated: Instant
     abstract val description: String
     abstract val amount: Double
-    abstract val startDate: Instant
+    abstract val transactionDate: Instant
     abstract val type: TransactionType
     abstract val pattern: RecurrancePattern
 }

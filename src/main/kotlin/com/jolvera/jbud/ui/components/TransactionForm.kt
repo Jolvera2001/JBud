@@ -1,4 +1,4 @@
-package com.jolvera.jbud.components
+package com.jolvera.jbud.ui.components
 
 import javafx.beans.property.StringProperty
 import javafx.geometry.Insets

@@ -16,7 +16,7 @@ class ExpenseTests {
 
         val expense = RecurringExpense(
             amount = 20.00,
-            startDate = currentDate,
+            transactionDate = currentDate,
             description = testDescription,
             type = TransactionType.HOUSING,
             pattern = RecurrancePattern.MONTHLY,
@@ -28,7 +28,7 @@ class ExpenseTests {
 
         expense shouldNotBe null
         expense.description shouldBe "test description"
-        expense.startDate shouldBe currentDate
+        expense.transactionDate shouldBe currentDate
         expense.type shouldBe TransactionType.HOUSING
         expense.pattern shouldBe RecurrancePattern.MONTHLY
         expense.payee shouldBe testPayee
@@ -41,7 +41,7 @@ class ExpenseTests {
     fun expenseUUIDNotNull() {
         val expense = RecurringExpense(
             amount = 20.00,
-            startDate = Instant.now(),
+            transactionDate = Instant.now(),
             description = "test description",
             type = TransactionType.HOUSING,
             pattern = RecurrancePattern.MONTHLY,

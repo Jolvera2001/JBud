@@ -1,6 +1,6 @@
 package com.jolvera.jbud.examples
 
-import com.jolvera.jbud.components.TransactionForm
+import com.jolvera.jbud.ui.components.TransactionForm
 import javafx.geometry.Insets
 import javafx.geometry.Pos
 import javafx.scene.layout.HBox
