@@ -9,6 +9,8 @@ module com.jolvera.jbud {
     requires jdk.jshell;
     requires kotlinx.coroutines.javafx;
     requires kotlinx.coroutines.core;
+    requires exposed.core;
+    requires koin.core.jvm;
 
     opens com.jolvera.jbud to javafx.fxml;
     exports com.jolvera.jbud;

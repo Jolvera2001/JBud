@@ -13,6 +13,9 @@ import javafx.stage.Stage
 
 class JBudApplication : Application() {
     override fun start(primaryStage: Stage?) {
+        // module
+        initKoin()
+
         primaryStage?.isMaximized = true
 
         val root = BorderPane()
