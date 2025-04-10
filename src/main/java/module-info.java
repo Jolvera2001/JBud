@@ -1,5 +1,4 @@
 module com.jolvera.jbud {
-    requires kotlin.stdlib;
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -8,6 +7,8 @@ module com.jolvera.jbud {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires jdk.jshell;
+    requires kotlinx.coroutines.javafx;
+    requires kotlinx.coroutines.core;
 
     opens com.jolvera.jbud to javafx.fxml;
     exports com.jolvera.jbud;

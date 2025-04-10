@@ -7,8 +7,15 @@ import javafx.scene.control.ListView
 import javafx.scene.layout.BorderPane
 import javafx.scene.layout.StackPane
 import javafx.stage.Stage
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.javafx.JavaFx
 
 class JBudApplication : Application() {
+    val appScope = CoroutineScope(Dispatchers.JavaFx)
+
     override fun start(primaryStage: Stage?) {
         primaryStage?.isMaximized = true
 
@@ -38,5 +45,10 @@ class JBudApplication : Application() {
         primaryStage?.title = "JBud"
         primaryStage?.scene = scene
         primaryStage?.show()
+    }
+
+    override fun stop() {
+        appScope.cancel()
+        super.stop()
     }
 }
