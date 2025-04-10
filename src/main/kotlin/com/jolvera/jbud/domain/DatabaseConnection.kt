@@ -10,11 +10,7 @@ class DatabaseConnection {
     private val dbString: String = "jdbc:sqlite:"
     private var db: Database? = null
 
-    fun databaseInitConnection() {
-        if (db != null) {
-            return
-        }
-
+    init {
         val os = System.getProperty("os.name").lowercase(Locale.getDefault())
         val path = when {
             os.contains("win") -> Paths.get(System.getenv("APPDATA"), appName)
