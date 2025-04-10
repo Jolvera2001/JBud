@@ -27,7 +27,16 @@ class JBudApplication : Application() {
         }
 
         val contentArea = StackPane()
-        navList.selectionModel.selectedItemProperty().addListener { _, _, newValue ->
+        navList.selectionModel.selectedItemProperty().addListener { _, oldValue, newValue ->
+            if (oldValue != null && contentArea.children.isNotEmpty()) {
+                when (contentArea.children[0]) {
+                    is DashboardView -> (contentArea.children[0] as DashboardView).onRemove()
+                    is IncomeView -> (contentArea.children[0] as IncomeView).onRemove()
+                    is ExpensesView -> (contentArea.children[0] as ExpensesView).onRemove()
+                    is ReportsView -> (contentArea.children[0] as ReportsView).onRemove()
+                }
+            }
+
             contentArea.children.clear()
             when (newValue) {
                 "Dashboard" -> contentArea.children.add(DashboardView())
