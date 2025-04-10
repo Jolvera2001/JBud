@@ -1,4 +1,4 @@
-package com.jolvera.jbud.views
+package com.jolvera.jbud.ui.views
 
 import com.jolvera.jbud.lib.BaseView
 import javafx.scene.control.Label

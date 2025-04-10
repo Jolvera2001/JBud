@@ -1,13 +1,12 @@
-package com.jolvera.jbud.views
+package com.jolvera.jbud.ui.views
 
 import com.jolvera.jbud.lib.BaseView
-import com.jolvera.jbud.lib.BaseViewModel
 import javafx.scene.control.Label
 import javafx.scene.layout.VBox
 
-class DashboardView : VBox(), BaseView {
+class ExpensesView : VBox(), BaseView {
     init {
-        val label = Label("Dashboard")
+        val label = Label("Expenses")
         children.add(label)
     }
 

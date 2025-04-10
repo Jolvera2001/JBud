@@ -1,6 +1,9 @@
 package com.jolvera.jbud
 
-import com.jolvera.jbud.views.*
+import com.jolvera.jbud.ui.views.DashboardView
+import com.jolvera.jbud.ui.views.ExpensesView
+import com.jolvera.jbud.ui.views.IncomeView
+import com.jolvera.jbud.ui.views.ReportsView
 import javafx.application.Application
 import javafx.scene.Scene
 import javafx.scene.control.ListView
