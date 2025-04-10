@@ -1,5 +1,6 @@
 package com.jolvera.jbud
 
+import com.jolvera.jbud.domain.DatabaseConnection
 import com.jolvera.jbud.ui.views.DashboardView
 import com.jolvera.jbud.ui.views.ExpensesView
 import com.jolvera.jbud.ui.views.IncomeView

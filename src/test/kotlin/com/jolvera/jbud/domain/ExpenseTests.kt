@@ -29,7 +29,7 @@ class ExpenseTests {
         )
 
         expense shouldNotBe null
-        expense.description shouldBe "test description"
+        expense.description shouldBe testDescription
         expense.transactionDate shouldBe currentDate
         expense.dateAdded shouldBe currentDate
         expense.dateUpdated shouldBe currentDate
