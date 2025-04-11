@@ -15,10 +15,12 @@ module com.jolvera.jbud {
     requires exposed.core;
     requires exposed.jdbc;
     requires exposed.dao;
+    requires exposed.kotlin.datetime;
 
     requires koin.core.jvm;
 
     requires org.slf4j;
+    requires jdk.jfr;
 
     opens com.jolvera.jbud to javafx.fxml;
     exports com.jolvera.jbud;
