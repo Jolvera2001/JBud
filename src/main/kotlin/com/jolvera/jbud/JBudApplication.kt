@@ -1,10 +1,7 @@
 package com.jolvera.jbud
 
-import com.jolvera.jbud.domain.DatabaseConnection
 import com.jolvera.jbud.ui.views.DashboardView
-import com.jolvera.jbud.ui.views.ExpensesView
-import com.jolvera.jbud.ui.views.IncomeView
-import com.jolvera.jbud.ui.views.ReportsView
+import com.jolvera.jbud.ui.views.ItemsView
 import javafx.application.Application
 import javafx.scene.Scene
 import javafx.scene.control.ListView
@@ -22,7 +19,7 @@ class JBudApplication : Application() {
         val root = BorderPane()
 
         val navList = ListView<String>().apply {
-            items.addAll("Dashboard", "Income", "Expenses", "Reports")
+            items.addAll("Dashboard", "Items")
             prefWidth = 180.0
         }
 
@@ -31,18 +28,14 @@ class JBudApplication : Application() {
             if (oldValue != null && contentArea.children.isNotEmpty()) {
                 when (contentArea.children[0]) {
                     is DashboardView -> (contentArea.children[0] as DashboardView).onRemove()
-                    is IncomeView -> (contentArea.children[0] as IncomeView).onRemove()
-                    is ExpensesView -> (contentArea.children[0] as ExpensesView).onRemove()
-                    is ReportsView -> (contentArea.children[0] as ReportsView).onRemove()
+                    is ItemsView -> (contentArea.children[0] as ItemsView).onRemove()
                 }
             }
 
             contentArea.children.clear()
             when (newValue) {
                 "Dashboard" -> contentArea.children.add(DashboardView())
-                "Income" -> contentArea.children.add(IncomeView())
-                "Expenses" -> contentArea.children.add(ExpensesView())
-                "Reports" -> contentArea.children.add(ReportsView())
+                "Items" -> contentArea.children.add(ItemsView())
             }
         }
 
