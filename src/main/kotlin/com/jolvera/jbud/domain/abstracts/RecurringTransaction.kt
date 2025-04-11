@@ -29,9 +29,10 @@ object RecurringTransactionTable: UUIDTable("recurring_transaction") {
     val transactionDate = timestamp("transaction_date")
     val type = enumerationByName("type", 50, TransactionType::class)
     val pattern = enumerationByName("pattern", 50, RecurrancePattern::class)
+    val discriminator = varchar("discriminator", 50)
 }
 
-class RecurringTransactionEntity(id: EntityID<UUID>) : UUIDEntity(id) {
+class RecurringTransactionEntity(id: EntityID<UUID>): UUIDEntity(id) {
     companion object : UUIDEntityClass<RecurringTransactionEntity>(RecurringTransactionTable)
 
     var dateAdded by RecurringTransactionTable.dateAdded
@@ -41,4 +42,5 @@ class RecurringTransactionEntity(id: EntityID<UUID>) : UUIDEntity(id) {
     var transactionDate by RecurringTransactionTable.transactionDate
     var type by RecurringTransactionTable.type
     var pattern by RecurringTransactionTable.pattern
+    var discriminator by RecurringTransactionTable.discriminator
 }
