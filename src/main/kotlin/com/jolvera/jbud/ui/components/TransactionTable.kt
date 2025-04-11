@@ -6,7 +6,6 @@ import javafx.beans.property.ReadOnlyStringWrapper
 import javafx.collections.ObservableList
 import javafx.scene.control.TableColumn
 import javafx.scene.control.TableView
-import java.time.Instant
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 
