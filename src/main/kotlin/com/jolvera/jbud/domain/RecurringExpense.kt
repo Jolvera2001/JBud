@@ -15,6 +15,7 @@ class RecurringExpense(
     override val id: UUID = UUID.randomUUID(),
     override val dateAdded: Instant,
     override val dateUpdated: Instant,
+    override val name: String,
     override val description: String,
     override val amount: Double,
     override val transactionDate: Instant,
@@ -23,7 +24,7 @@ class RecurringExpense(
     val payee: String,
     val paymentMethod: String,
     val notes: String,
-    val autoRenewable: Boolean,
+    val autoRenewable: Boolean
 ) : RecurringTransaction() {
 }
 

@@ -22,9 +22,6 @@ val appModule = module {
 
 fun initKoin() {
     startKoin {
-        logger(
-            logger = TODO()
-        )
         modules(appModule)
     }
 }

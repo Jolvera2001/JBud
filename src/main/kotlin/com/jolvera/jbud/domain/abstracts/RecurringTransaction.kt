@@ -14,6 +14,7 @@ abstract class RecurringTransaction {
     abstract val id: UUID
     abstract val dateAdded: Instant
     abstract val dateUpdated: Instant
+    abstract val name: String
     abstract val description: String
     abstract val amount: Double
     abstract val transactionDate: Instant
@@ -24,6 +25,7 @@ abstract class RecurringTransaction {
 object RecurringTransactionTable: UUIDTable("recurring_transaction") {
     val dateAdded = timestamp("date_added")
     val dateUpdated = timestamp("date_updated")
+    val name = varchar("name", 255)
     val description = varchar("description", 255)
     val amount = double("amount")
     val transactionDate = timestamp("transaction_date")
@@ -36,6 +38,7 @@ class RecurringTransactionEntity(id: EntityID<UUID>): UUIDEntity(id) {
 
     var dateAdded by RecurringTransactionTable.dateAdded
     var dateUpdated by RecurringTransactionTable.dateUpdated
+    var name by RecurringTransactionTable.name
     var description by RecurringTransactionTable.description
     var amount by RecurringTransactionTable.amount
     var transactionDate by RecurringTransactionTable.transactionDate

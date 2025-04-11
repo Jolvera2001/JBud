@@ -15,6 +15,7 @@ class RecurringIncome(
     override val id: UUID = UUID.randomUUID(),
     override val dateAdded: Instant,
     override val dateUpdated: Instant,
+    override val name: String,
     override val description: String,
     override val amount: Double,
     override val transactionDate: Instant,
