@@ -2,6 +2,7 @@ package com.jolvera.jbud.ui.viewmodels
 
 import com.jolvera.jbud.domain.RecurrancePattern
 import com.jolvera.jbud.domain.RecurringIncome
+import com.jolvera.jbud.domain.RecurringExpense
 import com.jolvera.jbud.domain.TransactionType
 import com.jolvera.jbud.domain.abstracts.RecurringTransaction
 import com.jolvera.jbud.lib.BaseViewModel
@@ -31,6 +32,7 @@ class ItemsViewModel: BaseViewModel() {
         selectedItem.set(item)
     }
 
+    // testing purposes
     private fun populateItems() {
         items.addAll(
             RecurringIncome(
@@ -46,6 +48,21 @@ class ItemsViewModel: BaseViewModel() {
                 source = "Job",
                 notes = "Some notes",
                 isGuaranteed = true
+            ),
+            RecurringExpense(
+                id = UUID.randomUUID(),
+                dateAdded = Instant.now(),
+                dateUpdated = Instant.now(),
+                name = "Blimbosoft Subscription",
+                description = "Subscription cost related to hosting Teto merch site",
+                amount = 40.00,
+                transactionDate = Instant.now(),
+                type = TransactionType.OTHER_EXPENSE,
+                pattern = RecurrancePattern.MONTHLY,
+                payee = "Blimbosoft",
+                paymentMethod = "Debit",
+                notes = "They took my money",
+                autoRenewable = true,
             )
         )
     }

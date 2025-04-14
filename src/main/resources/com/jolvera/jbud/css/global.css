@@ -10,6 +10,8 @@
     -fx-orange-muted: #cc7000;       /* Muted orange for subtle elements */
     -fx-text-primary: #e0e0e0;       /* Light text */
     -fx-text-secondary: #b0b0b0;     /* Darker text */
+
+    -fx-gap-moe: 14px;
 }
 
 .label {
