@@ -7,6 +7,7 @@ import org.jetbrains.exposed.dao.UUIDEntityClass
 import org.jetbrains.exposed.dao.id.EntityID
 import org.jetbrains.exposed.dao.id.UUIDTable
 import org.jetbrains.exposed.sql.kotlin.datetime.timestamp
+import java.text.DecimalFormat
 import java.time.Instant
 import java.util.*
 
@@ -20,6 +21,10 @@ abstract class RecurringTransaction {
     abstract val transactionDate: Instant
     abstract val type: TransactionType
     abstract val pattern: RecurrancePattern
+
+    fun getFormattedAmount(): String {
+        return DecimalFormat("0.00").format(amount)
+    }
 }
 
 object RecurringTransactionTable: UUIDTable("recurring_transaction") {
