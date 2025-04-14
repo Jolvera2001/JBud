@@ -5,6 +5,7 @@ import com.jolvera.jbud.domain.RecurringIncome
 import com.jolvera.jbud.domain.TransactionType
 import com.jolvera.jbud.domain.abstracts.RecurringTransaction
 import com.jolvera.jbud.lib.BaseViewModel
+import javafx.beans.property.SimpleObjectProperty
 import javafx.collections.FXCollections
 import javafx.collections.ObservableList
 import java.time.Instant
@@ -12,6 +13,7 @@ import java.util.UUID
 
 class ItemsViewModel: BaseViewModel() {
     private val items = FXCollections.observableArrayList<RecurringTransaction>()
+    private val selectedItem = SimpleObjectProperty<RecurringTransaction?>()
 
     init {
         populateItems()
@@ -19,6 +21,14 @@ class ItemsViewModel: BaseViewModel() {
 
     fun getItems(): ObservableList<RecurringTransaction> {
         return items
+    }
+
+    fun getSelectedItem(): SimpleObjectProperty<RecurringTransaction?> {
+        return selectedItem
+    }
+
+    fun setSelectedItem(item: RecurringTransaction?) {
+        selectedItem.set(item)
     }
 
     private fun populateItems() {

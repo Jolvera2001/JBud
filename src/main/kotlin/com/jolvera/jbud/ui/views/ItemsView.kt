@@ -1,6 +1,7 @@
 package com.jolvera.jbud.ui.views
 
 import com.jolvera.jbud.lib.BaseView
+import com.jolvera.jbud.ui.components.TransactionDetailWindow
 import com.jolvera.jbud.ui.components.TransactionTable
 import com.jolvera.jbud.ui.viewmodels.ItemsViewModel
 import javafx.geometry.Insets
@@ -18,8 +19,8 @@ class ItemsView : VBox(), BaseView {
 
         val masterView = MasterDetailPane()
 
-        masterView.masterNode = TransactionTable(viewModel.getItems())
-        masterView.detailNode = PropertySheet()
+        masterView.masterNode = TransactionTable(viewModel.getItems(), viewModel.setSelectedItem())
+        masterView.detailNode = TransactionDetailWindow(viewModel.getSelectedItem())
         masterView.detailSide = Side.RIGHT
 
         children.add(masterView)
