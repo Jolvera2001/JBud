@@ -19,7 +19,7 @@ class ItemsView : VBox(), BaseView {
 
         val masterView = MasterDetailPane()
 
-        masterView.masterNode = TransactionTable(viewModel.getItems(), viewModel.setSelectedItem())
+        masterView.masterNode = TransactionTable(viewModel.getItems(), viewModel::setSelectedItem)
         masterView.detailNode = TransactionDetailWindow(viewModel.getSelectedItem())
         masterView.detailSide = Side.RIGHT
 
