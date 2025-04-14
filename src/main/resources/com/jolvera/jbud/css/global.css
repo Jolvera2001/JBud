@@ -80,6 +80,11 @@
     -fx-background-color: -fx-dark-highlight;
 }
 
+/* Split Pane*/
+.split-pane {
+    -fx-background-color: -fx-dark-accent;
+}
+
 /* Table and ListView (general, not your nav) */
 .table-view, .list-view {
     -fx-background-color: -fx-dark-accent;
@@ -88,7 +93,7 @@
     -fx-border-radius: 8px;
 }
 
-.table-view .column-header, .table-view .column-header-background {
+.table-view .column-header, .table-view .column-header-background, .filler {
     -fx-background-color: -fx-dark-highlight;
 }
 
