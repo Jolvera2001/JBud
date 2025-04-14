@@ -1,7 +1,175 @@
 .root {
+    -fx-background-color: #1e1e1e;
     -fx-font-family: "Segoe UI", Arial, sans-serif;
+
+    -fx-dark-base: #1e1e1e;
+    -fx-dark-accent: #2d2d2d;
+    -fx-dark-highlight: #3d3d3d;
+    -fx-orange-accent: #ff8c00;      /* Main orange */
+    -fx-orange-light: #ffa033;       /* Lighter orange for hovers */
+    -fx-orange-muted: #cc7000;       /* Muted orange for subtle elements */
+    -fx-text-primary: #e0e0e0;       /* Light text */
+    -fx-text-secondary: #b0b0b0;     /* Darker text */
+}
+
+.label {
+    -fx-text-fill: -fx-text-primary;
 }
 
 .button {
-    -fx-background-color: #4287f5;
+    -fx-background-color: -fx-dark-accent;
+    -fx-text-fill: -fx-text-primary;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-padding: 8 15;
+}
+
+.button:hover {
+    -fx-background-color: -fx-dark-highlight;
+}
+
+.button.primary {
+    -fx-background-color: -fx-orange-muted;
+    -fx-text-fill: white;
+}
+
+.button.primary:hover {
+    -fx-background-color: -fx-orange-accent;
+}
+
+/* Text fields */
+.text-field, .text-area {
+    -fx-background-color: -fx-dark-accent;
+    -fx-text-fill: -fx-text-primary;
+    -fx-prompt-text-fill: -fx-text-secondary;
+    -fx-highlight-fill: -fx-orange-muted;
+    -fx-highlight-text-fill: white;
+    -fx-background-radius: 3px;
+    -fx-border-color: -fx-dark-highlight;
+    -fx-border-radius: 3px;
+    -fx-padding: 8;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: -fx-orange-muted;
+}
+
+/* Combo box and choice box */
+.combo-box, .choice-box {
+    -fx-background-color: -fx-dark-accent;
+    -fx-text-fill: -fx-text-primary;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+}
+
+.combo-box .list-cell, .choice-box .label {
+    -fx-text-fill: -fx-text-primary;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: -fx-dark-accent;
+    -fx-border-color: -fx-dark-highlight;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: -fx-dark-accent;
+    -fx-text-fill: -fx-text-primary;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: -fx-dark-highlight;
+}
+
+/* Table and ListView (general, not your nav) */
+.table-view, .list-view {
+    -fx-background-color: -fx-dark-accent;
+    -fx-table-cell-border-color: -fx-dark-highlight;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+}
+
+.table-view .column-header, .table-view .column-header-background {
+    -fx-background-color: -fx-dark-highlight;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: -fx-text-primary;
+}
+
+.table-row-cell, .list-cell {
+    -fx-background-color: -fx-dark-accent;
+    -fx-text-fill: -fx-text-primary;
+}
+
+.table-row-cell:odd, .list-cell:odd {
+    -fx-background-color: -fx-dark-base;
+}
+
+.table-row-cell:selected, .list-cell:selected {
+    -fx-background-color: -fx-orange-muted;
+    -fx-text-fill: white;
+}
+
+.table-cell {
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-padding: 5;
+}
+
+/* Checkbox and RadioButton */
+.check-box .box, .radio-button .radio {
+    -fx-background-color: -fx-dark-accent;
+    -fx-border-color: -fx-dark-highlight;
+}
+
+.check-box:selected .mark, .radio-button:selected .dot {
+    -fx-background-color: -fx-orange-accent;
+}
+
+/* Slider */
+.slider .track {
+    -fx-background-color: -fx-dark-highlight;
+}
+
+.slider .thumb {
+    -fx-background-color: -fx-orange-accent;
+}
+
+/* Progress bar */
+.progress-bar > .bar {
+    -fx-background-color: -fx-orange-accent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.progress-bar > .track {
+    -fx-background-color: -fx-dark-highlight;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+/* Scroll bars */
+.scroll-bar {
+    -fx-background-color: -fx-dark-base;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: -fx-dark-highlight;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: -fx-orange-muted;
+}
+
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
+    -fx-background-color: -fx-text-secondary;
+}
+
+/* Add a subtle orange border to focused controls */
+.focused {
+    -fx-border-color: -fx-orange-muted;
 }

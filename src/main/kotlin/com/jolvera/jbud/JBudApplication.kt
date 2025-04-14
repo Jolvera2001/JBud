@@ -2,6 +2,7 @@ package com.jolvera.jbud
 
 import com.jolvera.jbud.ui.views.DashboardView
 import com.jolvera.jbud.ui.views.ItemsView
+import fr.brouillard.oss.cssfx.CSSFX
 import javafx.application.Application
 import javafx.scene.Scene
 import javafx.scene.control.ListView
@@ -20,6 +21,7 @@ class JBudApplication : Application() {
 
         val navList = ListView<String>().apply {
             items.addAll("Dashboard", "Items")
+            styleClass.add("nav-tabs")
             prefWidth = 180.0
         }
 
@@ -43,7 +45,13 @@ class JBudApplication : Application() {
         root.center = contentArea
         navList.selectionModel.select(0)
 
+        CSSFX.start()
+
         val scene = Scene(root)
+        scene.stylesheets.addAll(
+            javaClass.getResource("css/global.css").toExternalForm(),
+            javaClass.getResource("css/nav.css").toExternalForm(),
+        )
         primaryStage?.title = "JBud"
         primaryStage?.scene = scene
         primaryStage?.show()

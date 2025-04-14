@@ -1,0 +1,35 @@
+.nav-tabs {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 5;
+    -fx-background-insets: 0;
+}
+
+.nav-tabs .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #adb5bd;
+    -fx-font-size: 15px;
+    -fx-padding: 12 15;
+    -fx-border-width: 0 0 0 3;
+    -fx-border-color: transparent;
+}
+
+.nav-tabs .list-cell:selected {
+    -fx-background-color: #2b3035;
+    -fx-text-fill: white;
+    -fx-border-color: -fx-orange-light;
+}
+
+.nav-tabs .list-cell:hover {
+    -fx-background-color: #2b3035;
+    -fx-text-fill: white;
+}
+
+.nav-tabs .list-cell:filled:selected .selection-rectangle {
+    -fx-fill: transparent;
+}
+
+.nav-tabs .scroll-bar:vertical {
+    -fx-opacity: 0;
+    -fx-scale-x: 0;
+}

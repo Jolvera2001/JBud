@@ -10,6 +10,7 @@ import javafx.scene.layout.VBox
 class TransactionDetailWindow(transactionProperty: SimpleObjectProperty<RecurringTransaction?>) : VBox() {
     init {
         children.clear()
+        styleClass.add("custom-detail-pane")
 
         if (transactionProperty.value != null) {
             createUI(transactionProperty.value!!)

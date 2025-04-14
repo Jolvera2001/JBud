@@ -21,6 +21,7 @@ module com.jolvera.jbud {
 
     requires org.slf4j;
     requires jdk.jfr;
+    requires fr.brouillard.oss.cssfx;
 
     opens com.jolvera.jbud to javafx.fxml;
     exports com.jolvera.jbud;
