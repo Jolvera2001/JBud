@@ -10,7 +10,8 @@ import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 
 class TransactionTable(
-    itemsList: ObservableList<RecurringTransaction>
+    itemsList: ObservableList<RecurringTransaction>,
+    private val onSelectionChanged: (RecurringTransaction?) -> Unit
 ): TableView<RecurringTransaction>() {
     init {
         val name = TableColumn<RecurringTransaction, String>("Name")
@@ -45,7 +46,11 @@ class TransactionTable(
         }
 
         columns.addAll(name, description, amount, type, pattern, transactionDate)
-
         items = itemsList
+
+        selectionModel.selectedItemProperty().addListener { _, _, newSelection ->
+            onSelectionChanged(newSelection)
+        }
+
     }
 }
